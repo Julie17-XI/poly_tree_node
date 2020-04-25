@@ -6,10 +6,13 @@ class PolyTreeNode
         @children = []
     end
 
-    def parent= (node)
+    def parent= (node = nil)
         @parent = node
-        if !node.children.include?(self)
-            node.children << self
+
+        if node != nil
+            if (!node.children.include?(self))
+                node.children << self
+            end
         end
     end
 
