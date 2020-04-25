@@ -32,4 +32,8 @@ class PolyTreeNode
         raise "not a child" if !self.children.include?(node)
         node.parent= nil
     end
+
+    def inspect
+        { 'value'=>@value,'parent_value'=>@parent.value }.inspect
+    end
 end
