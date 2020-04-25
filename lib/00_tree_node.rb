@@ -23,6 +23,8 @@ class PolyTreeNode
 
     def add_child(node)
         node.parent= self
-        self.children << node
+        if !self.children.include?(node)
+            self.children << node
+        end
     end
 end
