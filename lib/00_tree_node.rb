@@ -45,4 +45,18 @@ class PolyTreeNode
         end
         nil
     end
+
+    def bfs(target)
+        arr = []
+        arr << self
+        until arr.empty?
+            current = arr.shift 
+            if current.value == target
+                return current 
+            else
+                arr += current.children
+            end
+        end
+        nil
+    end
 end
