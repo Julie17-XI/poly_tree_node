@@ -36,4 +36,13 @@ class PolyTreeNode
     def inspect
         { 'value'=>@value,'parent_value'=>@parent.value }.inspect
     end
+
+    def dfs(target)
+        return self if self.value == target
+        self.children.each do |child|
+            search_result = child.dfs(target)
+            return search_result unless search_result.nil?
+        end
+        nil
+    end
 end
