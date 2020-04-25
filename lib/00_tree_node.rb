@@ -8,6 +8,7 @@ class PolyTreeNode
 
     def parent= (node)
         @parent = node
+        node.children << self
     end
-    
+
 end
