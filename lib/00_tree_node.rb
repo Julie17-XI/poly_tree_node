@@ -21,4 +21,8 @@ class PolyTreeNode
         end
     end
 
+    def add_child(node)
+        node.parent= self
+        self.children << node
+    end
 end
