@@ -27,4 +27,9 @@ class PolyTreeNode
             self.children << node
         end
     end
+
+    def remove_child(node)
+        raise "not a child" if !self.children.include?(node)
+        node.parent= nil
+    end
 end
